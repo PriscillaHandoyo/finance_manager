@@ -6,7 +6,7 @@ from operator import itemgetter
 from datetime import datetime
 import time
 
-file = "/Users/priscillahandoyo/Documents/Project/finance_manager/Jan-Des2024.csv"
+file = "/Users/priscillahandoyo/Documents/Project/finance_manager/Mar2024-Mar2025.csv"
 output_file = "/Users/priscillahandoyo/Documents/Project/finance_manager/bank_statement_sorted.csv"
 
 # Define categories and their keywords
@@ -34,8 +34,8 @@ def categorize_transaction(desc):
 
 # Extract month from date string
 def extract_month(date_str):
-    date_obj = datetime.strptime(date_str, '%d/%m/%Y')
-    return date_obj.strftime('%B')
+    date_obj = datetime.strptime(date_str, '%d/%m/%Y') # strptime: string to datetime
+    return date_obj.strftime('%B') # strftime: datetime to string
 
 # Store transactions by month
 transactions_by_month = {}
